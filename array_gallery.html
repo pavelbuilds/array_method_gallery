@@ -1,9 +1,9 @@
-open<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Array Gallery</title>
-  <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">  
   <link rel="stylesheet" href="array_gallery.css">
   <link rel="icon" href="array_gallery_icon.png">
 </head>
@@ -11,7 +11,7 @@ open<!DOCTYPE html>
   <div class="panels">
     <div class="panel panel1">
       <p>.filter()</p>
-      <div class="method-text">
+      <div class="method-explanation">
          The filter method runs a provided callback funtion an every elemnt of the array. It returns a new array with all elements that pass the call back - which means the return value of the callback is equal to "true".
          <br>
          <br>
@@ -47,7 +47,7 @@ open<!DOCTYPE html>
    </div>
    <div class="panel panel2">
       <p>.sort()</p>
-      <div class="method-text">
+      <div class="method-explanation">
          The sort() method sorts the items of an array. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values. Because of this, the sort() method will produce an incorrect result when sorting numbers. You can fix this by providing a "compare function”. When the sort() method compares two values, it sends the values to the compare function, and sorts the values according to the returned value. Therefore the compare function should return a negative, zero, or positive value.
          <br> <br>
          <b>1.</b> If compare (a,b) is less than zero, the sort( ) method sorts a to a lower index than b. In other words, a will come first.
@@ -91,7 +91,7 @@ open<!DOCTYPE html>
    </div>
    <div class="panel panel3">
       <p>.map()</p>
-      <div class="method-text">
+      <div class="method-explanation">
          The .map() method run a provided callback funciton on every element of the array. It returns the results that are returned by the callback each time in a new array.
          <br><br><br>
          <b>Syntax</b>
@@ -123,7 +123,7 @@ open<!DOCTYPE html>
    </div>
    <div class="panel panel4">
       <p>.reduce()</p>
-      <div class="method-text">
+      <div class="method-explanation">
          The .reduce() method executes a reducer function (that you provide) on each element of the array, resulting in single output value.         <br>
          <br>
          <br>
@@ -156,7 +156,7 @@ open<!DOCTYPE html>
    </div>
    <div class="panel panel5">
       <p>.flat()</p>
-      <div class="method-text">
+      <div class="method-explanation">
          The flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth. The depth level specifying how deep a nested array structure should be flattened. Defaults to 1.
       <br>
       <br>
