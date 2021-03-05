@@ -1,5 +1,13 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background: #ffc600;
   font-family: 'Lato', sans-serif;   
   font-size: 20px;
@@ -12,29 +20,61 @@ body {
 }
  
 *, *:before, *:after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 .panels {
   height: 100vh;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .panel {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   align-items: center;
   font-size: 20px;
   color: white;
+  -webkit-transition:
+    font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    background 0.2s,
+    -webkit-box-flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11);
+  transition:
+    font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    background 0.2s,
+    -webkit-box-flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11);
+  -o-transition:
+    font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    background 0.2s;
   transition:
     font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
     flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
     background 0.2s;
+  transition:
+    font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    background 0.2s,
+    -webkit-box-flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    -ms-flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11);
 }
 
 .panel1 { background-color: #D74D55;}
@@ -44,37 +84,95 @@ body {
 .panel5 { background-color: #225386; }
 
 .panel > p {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex: 1 0 52.5%;
-  justify-content: center;
-  align-items: flex-end;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 52.5%;
+          flex: 1 0 52.5%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   min-height: 15vh; max-height: 50vh; width: 100%;
   margin: 0;
-  font-family: 'Consolas', cursive;
+  font-family: 'Inconsolata', monospace;
   font-size: 1.2em;
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
   letter-spacing: 2px;
+  -webkit-transition:
+    font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    opacity 0.5s ease-in-out,
+    -webkit-box-flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    -webkit-transform 0.7s ease-in-out;
+  transition:
+    font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    opacity 0.5s ease-in-out,
+    -webkit-box-flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    -webkit-transform 0.7s ease-in-out;
+  -o-transition:
+    font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    transform 0.7s ease-in-out,
+    opacity 0.5s ease-in-out;
   transition:
     font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
     flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
     transform 0.7s ease-in-out,
     opacity 0.5s ease-in-out;
+  transition:
+    font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    transform 0.7s ease-in-out,
+    opacity 0.5s ease-in-out,
+    -webkit-box-flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    -ms-flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    -webkit-transform 0.7s ease-in-out;
 }
 
 .panel > div {
-  flex: 1 0 50%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 50%;
+          flex: 1 0 50%;
   margin: 0;
   padding: 50px 20px 20px 20px;
   font-size: 0.1em;
   letter-spacing: 1px;
-  transform: translateY(100%);
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
   overflow-y: scroll;
   opacity: 0;
+  -webkit-transition:
+    font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    opacity 0.7s ease-in-out 0.7s,
+    -webkit-box-flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    -webkit-transform 0.7s ease-in-out;
+  transition:
+    font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    opacity 0.7s ease-in-out 0.7s,
+    -webkit-box-flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    -webkit-transform 0.7s ease-in-out;
+  -o-transition:
+    flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    transform 0.7s ease-in-out,
+    opacity 0.7s ease-in-out 0.7s;
   transition:
     flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
     font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
     transform 0.7s ease-in-out,
     opacity 0.7s ease-in-out 0.7s;
+  transition:
+    flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    transform 0.7s ease-in-out,
+    opacity 0.7s ease-in-out 0.7s,
+    -webkit-box-flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    -ms-flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    -webkit-transform 0.7s ease-in-out;
 }
 
 .panel > div::-webkit-scrollbar {
@@ -84,22 +182,30 @@ body {
 }
 
 .panel.open-active > p { 
-  flex: 1 0 15%;
+  -webkit-box-flex: 1; 
+      -ms-flex: 1 0 15%; 
+          flex: 1 0 15%;
   font-size: 40px;
 }
 
 .panel.open-active > div { 
-  flex: 1 0 85%;
+  -webkit-box-flex: 1; 
+      -ms-flex: 1 0 85%; 
+          flex: 1 0 85%;
   font-size: 0.9em;
   letter-spacing: 1px;
   opacity: 1;
   max-height: 85vh;
-  transform: translateY(0%);
+  -webkit-transform: translateY(0%);
+      -ms-transform: translateY(0%);
+          transform: translateY(0%);
   overflow-y: scroll;
 }
 
 .panel.open{
-   flex: 3;
+   -webkit-box-flex: 3;
+       -ms-flex: 3;
+           flex: 3;
 }
 
 .method-explanation {
@@ -109,9 +215,8 @@ body {
 
 .code-snippet {
   background-color: #333;
-  font-family: 'Consolas', cursive;
+  font-family: 'Inconsolata', monospace;
   padding: 10px 10px 10px 10px;
   border-radius: 4px;
   line-height: 2em;
 }
-
