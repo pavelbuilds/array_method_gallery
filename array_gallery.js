@@ -16,4 +16,4 @@ function toggleOpen() {
 
 panels.forEach(panel => panel.addEventListener("click", toggleOpen));
 
-// That a test  I hope it works
+// That's a test commit to see if it works - let's hope so :)
