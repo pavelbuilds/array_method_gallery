@@ -192,7 +192,7 @@ body {
   -webkit-box-flex: 1; 
       -ms-flex: 1 0 85%; 
           flex: 1 0 85%;
-  font-size: 0.9em;
+  font-size: 1em;
   letter-spacing: 1px;
   opacity: 1;
   max-height: 85vh;
