@@ -13,7 +13,7 @@
       <div class="panel panel1">
          <p>.filter()</p>
          <div class="method-explanation">
-         The filter method runs a provided callback function on every element of the array. It returns a new array with all elements that pass the call back - which means the return value of the callback is equal to "true".
+         The .filter() method runs a provided callback function on every element of the array. It returns a new array with all elements that pass the call back - which means the return value of the callback is equal to "true".
          <br>
          <br>
          <br>
@@ -92,7 +92,7 @@
       <div class="panel panel3">
          <p>.map()</p>
          <div class="method-explanation">
-            The .map() method run a provided callback function on every element of the array. It returns the results that are returned by the callback each time in a new array.
+            The .map() method runs a provided callback function on every element of the array. It returns the results that are returned by the callback each time in a new array.
             <br><br><br>
             <b>Syntax</b>
             <br><br>
@@ -146,8 +146,10 @@
                <span style="color: #4a86Ba">let </span style="color: #4a86Ba"><span style="color:#9ADCFF">sum</span style="color:#9ADCFF"> = [<span style="color:#B4CFA7">0</span>, <span style="color:#B4CFA7">1</span>, <span style="color:#B4CFA7">2</span>, <span style="color:#B4CFA7">3</span>]
                <br>
                .<span style="color:#DCDDA8">reduce</span style="color:#DCDDA8">(<span style="color: #4a86Ba">function</span>(<span style="color:#9ADCFF">accumulator</span style="color:#9ADCFF">, <span style="color:#9ADCFF">currentValue</span style="color:#9ADCFF">) {
-                  <span style="color:#C081BB"> return</span> <span style="color:#9ADCFF"> accumulator </span style="color:#9ADCFF"> + <span style="color:#9ADCFF">currentValue</span style="color:#9ADCFF">
-               }, <span style="color:#B4CFA7" style="color:#B4CFA7">0</span style="color:#B4CFA7">)
+               <span style="color:#C081BB">
+               <br>
+               return</span> <span style="color:#9ADCFF"> accumulator </span style="color:#9ADCFF"> + <span style="color:#9ADCFF">currentValue</span style="color:#9ADCFF">
+               <br> }, <span style="color:#B4CFA7" style="color:#B4CFA7">0</span style="color:#B4CFA7">)
                <br>
                <span style="color:#699A52">// sum is 6</span> 
 
@@ -157,7 +159,7 @@
       <div class="panel panel5">
          <p>.flat()</p>
          <div class="method-explanation">
-            The flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth. The depth level is specifying how deep a nested array structure should be flattened. It defaults to 1.
+            The .flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth. The depth level is specifying how deep a nested array structure should be flattened. It defaults to 1.
          <br>
          <br>
             <b>Syntax</b>
