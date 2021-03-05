@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Array Gallery</title>
+  <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="array_gallery.css">
+  <link rel="icon" href="array_gallery_icon.png">
+</head>
+<body>
+  <div class="panels">
+    <div class="panel panel1">
+      <p>.filter()</p>
+      <div class="method-text">
+         The filter method runs a provided callback funtion an every elemnt of the array. It returns a new array with all elements that pass the call back - which means the return value of the callback is equal to "true".
+         <br>
+         <br>
+         <br>
+         <b>Syntax</b>
+         <br>
+         <br>
+         <div class="code-snippet">
+            <span style="color: #4a86Ba">let</span><span style="color:#9ADCFF"> newArr </span >=<span style="color:#9ADCFF"> arr</span>.<span style="color:#DCDDA8">filter</span>(<span style="color:#4a86Ba">function </span><span style="color:#DCDDA8">callback</span>(<span style="color:#9ADCFF">currentValue</span>){
+               <br>
+               <span style="color:#699A52"> //callback function body</span>
+               <br>
+            });
+         </div>
+         <br>
+         <br>
+         <b>Example</b>
+         <br>
+         <br>
+         <div class="code-snippet">
+            <span style="color: #4a86Ba">let</span><span style="color:#9ADCFF"> ages </span >= [<span  style="color:#B4CFA7">12</span>,<span style="color:#B4CFA7">24</span>,<span style="color:#B4CFA7">34</span>,<span style="color:#B4CFA7">18</span>,<span style="color:#B4CFA7">16</span>,<span style="color:#B4CFA7">14</span>,<span style="color:#B4CFA7">22</span>,<span style="color:#B4CFA7">25</span>];
+         <br> <br>
+            <span style="color:#4a86Ba">function</span> <span style="color:#DCDDA8">isFullAge</span>(<span style="color:#9ADCFF">age</span>){
+         <br>
+               (<span style="color:#9ADCFF">age</span><span>&#62;</span><span style="color:#B4CFA7">18</span>) ? <span style="color:#4a86Ba">true</span> : <span style="color:#4a86Ba">false</span>;
+         <br>
+            }
+         <br> <br>
+            <span style="color: #4a86Ba">let</span> <span style="color:#9ADCFF">fullAges</span> = <span style="color:#9ADCFF">ages</span style="color:#9ADCFF">.<span style="color:#DCDDA8">filter</span>(<span style="color:#9ADCFF">isFullAge</span>);
+         <span>console</span>.<span style="color:#DCDDA8">log</span>(<span style="color:#9ADCFF">fullAges</span style="color:#9ADCFF">) <span style="color:#699A52">// [24,34,18,22,25]</span>
+         </div>
+      </div>
+   </div>
+   <div class="panel panel2">
+      <p>.sort()</p>
+      <div class="method-text">
+         The sort() method sorts the items of an array. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values. Because of this, the sort() method will produce an incorrect result when sorting numbers. You can fix this by providing a "compare function”. When the sort() method compares two values, it sends the values to the compare function, and sorts the values according to the returned value. Therefore the compare function should return a negative, zero, or positive value.
+         <br> <br>
+         <b>1.</b> If compare (a,b) is less than zero, the sort( ) method sorts a to a lower index than b. In other words, a will come first.
+         <br><br>
+         <b>2.</b> If compare (a,b) is greater than zero, the sort( ) method sort b to a lower index than a, i.e., b will come first.
+         <br><br>
+         <b>3.</b> If compare (a,b) returns zero, the sort ( ) method considers a equals b and leaves their positions unchanged.
+         <br>
+         <br>
+         <br>
+         <b>Syntax</b>
+         <br>
+         <br>
+         <div class="code-snippet">
+            <span style="color: #4a86Ba">let</span><span style="color:#9ADCFF"> newArr </span >=
+               <br>
+               <span style="color:#9ADCFF">arr</span>.<span style="color:#DCDDA8">sort</span>(<span style="color:#DCDDA8">compareFunction</span>(<span style="color:#9ADCFF">a</span>, <span style="color:#9ADCFF">b</span>){
+               <br>
+               <span style="color:#699A52"> //compare function body</span>
+               <br>
+            });
+         </div>
+         <br>
+         <br>
+         <b>Example</b>
+         <br>
+         <br>
+         <div class="code-snippet">
+            <span style="color: #4a86Ba">let</span><span style="color:#9ADCFF"> nums </span >= [<span  style="color:#B4CFA7">40</span>, <span style="color:#B4CFA7">100</span>, <span style="color:#B4CFA7">1</span>, <span style="color:#B4CFA7">5</span>, <span style="color:#B4CFA7">25</span>, <span style="color:#B4CFA7">10</span>];
+            <br> <br>
+            <span style="color:#9ADCFF"> nums</span>.<span style="color:#DCDDA8">sort</span>(<span style="color:#4a86Ba">function</span>(<span style="color:#9ADCFF">a</span>, <span style="color:#9ADCFF">b</span>) {
+            <br>
+            <span style="color:#C081BB">return</span> <span style="color:#9ADCFF">a</span> - <span style="color:#9ADCFF">b</span>)
+            <br>
+            });
+            <br>
+            <span style="color:#699A52">// nums is now [1, 5, 10, 25, 40, 100]</span>
+         </div>
+      </div>
+
+   </div>
+   <div class="panel panel3">
+      <p>.map()</p>
+      <div class="method-text">
+         The .map() method run a provided callback funciton on every element of the array. It returns the results that are returned by the callback each time in a new array.
+         <br><br><br>
+         <b>Syntax</b>
+         <br><br>
+         <div class="code-snippet">
+            <span style="color: #4a86Ba">let</span><span style="color:#9ADCFF"> newArr </span >=<span style="color:#9ADCFF"> arr</span>.<span style="color:#DCDDA8">map</span>(<span style="color:#4a86Ba">function </span><span style="color:#DCDDA8">callback</span>(<span style="color:#9ADCFF">currentValue</span>){
+            <br>
+            <span style="color:#699A52"> //callback function body</span>
+            <br>
+            });
+         </div>
+         <br><br>
+         <b>Example</b>
+         <br><br>
+         <div class="code-snippet">
+            <span style="color: #4a86Ba">let</span><span style="color:#9ADCFF"> numbers </span >= [<span  style="color:#B4CFA7">1</span>,<span style="color:#B4CFA7">4</span>,<span style="color:#B4CFA7">9</span>,<span style="color:#B4CFA7">16</span>,<span style="color:#B4CFA7">25</span>,<span style="color:#B4CFA7">36</span>,<span style="color:#B4CFA7">49</span>,<span style="color:#B4CFA7">64</span>];
+            <br> <br>
+            <span style="color: #4a86Ba">let</span><span style="color:#9ADCFF"> roots </span >=<span style="color:#9ADCFF"> numbers</span ><span style="color:#DCDDA8">map</span>(<span style="color:#4a86Ba">function</span>(<span style="color:#9ADCFF">num</span>) {
+            <br>
+            <span style="color:#C081BB">return</span> <span style="color:#47CAB0">Math</span>.<span style="color:#DCDDA8">sqrt</span>(<span style="color:#9ADCFF">num</span>)
+            <br>
+            })
+            <br>
+            <span style="color:#699A52">// roots is now [1, 2, 3]</span>
+            <br>
+            <span style="color:#699A52">// numbers is still [1, 4, 9]</span>
+         </div>
+      </div>
+   </div>
+   <div class="panel panel4">
+      <p>.reduce()</p>
+      <div class="method-text">
+         The .reduce() method executes a reducer function (that you provide) on each element of the array, resulting in single output value.         <br>
+         <br>
+         <br>
+         <b>Syntax</b>
+         <br>
+         <br>
+         <div class="code-snippet">
+            <span style="color: #4a86Ba">let</span><span style="color:#9ADCFF"> newArr </span >=<span style="color:#9ADCFF"> arr</span>.<span style="color:#DCDDA8">reduce</span>(<span style="color:#4a86Ba">function </span><span style="color:#DCDDA8">callback</span>(<span style="color:#9ADCFF">accumulator</span>, <span style="color:#9ADCFF">currentValue</span>){
+               <br>
+               <span style="color:#699A52"> //reducer function body</span>
+               <br>
+            },<span style="color:#9ADCFF">initialValue</span>);
+         </div>
+         <br>
+         <br>
+         <b>Example</b>
+         <br>
+         <br>
+         <div class="code-snippet">
+            <span style="color: #4a86Ba">let </span style="color: #4a86Ba"><span style="color:#9ADCFF">sum</span style="color:#9ADCFF"> = [<span style="color:#B4CFA7">0</span>, <span style="color:#B4CFA7">1</span>, <span style="color:#B4CFA7">2</span>, <span style="color:#B4CFA7">3</span>]
+            <br>
+            .<span style="color:#DCDDA8">reduce</span style="color:#DCDDA8">(<span style="color: #4a86Ba">function</span>(<span style="color:#9ADCFF">accumulator</span style="color:#9ADCFF">, <span style="color:#9ADCFF">currentValue</span style="color:#9ADCFF">) {
+               <span style="color:#C081BB"> return</span> <span style="color:#9ADCFF"> accumulator </span style="color:#9ADCFF"> + <span style="color:#9ADCFF">currentValue</span style="color:#9ADCFF">
+             }, <span style="color:#B4CFA7" style="color:#B4CFA7">0</span style="color:#B4CFA7">)
+            <br>
+             <span style="color:#699A52">// sum is 6</span> 
+
+         </div>
+      </div>
+   </div>
+   <div class="panel panel5">
+      <p>.flat()</p>
+      <div class="method-text">
+         The flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth. The depth level specifying how deep a nested array structure should be flattened. Defaults to 1.
+      <br>
+      <br>
+         <b>Syntax</b>
+         <br>
+         <br>
+         <div class="code-snippet">
+            <span style="color:#9ADCFF">myArray</span style="color:#9ADCFF">.<span style="color:#DCDDA8">flat</span>(<span style="color:#9ADCFF">depth</span>);
+         </div>
+         <br>
+         <br>
+         <b>Example</b>
+         <br>
+         <br>
+         <div class="code-snippet">
+         <span  style="color: #4a86Ba">const </span> <span style="color:#9ADCFF">myArr </span>= [ <span style="color:#B4CFA7">1</span>,<span style="color:#B4CFA7">2,</span> [<span style="color:#B4CFA7">3</span>, <span style="color:#B4CFA7">4</span>, [<span style="color:#B4CFA7">5</span>, <span style="color:#B4CFA7">6</span>]]];
+         <br>
+         <span style="color:#9ADCFF">myArr</span>.<span style="color:#DCDDA8">flat</span>();
+         <br>
+         <span style="color:#699A52"> // [1, 2, 3, 4, [5, 6]]</span>
+         <br>
+         <br>
+         <span  style="color: #4a86Ba">const </span> <span style="color:#9ADCFF">myArr </span>= [ <span style="color:#B4CFA7">1</span>,<span style="color:#B4CFA7">2,</span> [<span style="color:#B4CFA7">3</span>, <span style="color:#B4CFA7">4</span>, [<span style="color:#B4CFA7">5</span>, <span style="color:#B4CFA7">6</span>]]];
+         <br>
+         <span style="color:#9ADCFF">myArr</span>.<span style="color:#DCDDA8">flat</span>(<span style="color:#B4CFA7">2</span>);
+         <br>
+         <span style="color:#699A52"> // [1, 2, 3, 4, 5, 6]</span>
+         </div>
+      </div>
+   </div>
+  </div>
+
+<script src="array_gallery.js">
+
+</script>
+</body>
+</html>
+
+<!-- That's a test  I hope it works :
