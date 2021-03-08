@@ -175,20 +175,22 @@ html {
      -webkit-transform 0.7s ease-in-out;
  }
  
- .panel > div::-webkit-scrollbar {
-   display: none;
-   -ms-overflow-style: none;
-   scrollbar-width: none;
+ .panel { 
+   >div::-webkit-scrollbar {
+      display: none;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+   }
  }
  
- .panel.open-active > p { 
-   -webkit-box-flex: 1; 
-       -ms-flex: 1 0 15%; 
-           flex: 1 0 15%;
-   font-size: 40px;
- }
- 
- .panel.open-active > div { 
+ .panel.open-active {
+   >p { 
+      -webkit-box-flex: 1; 
+         -ms-flex: 1 0 15%; 
+            flex: 1 0 15%;
+      font-size: 40px;
+   }
+   > div { 
    -webkit-box-flex: 1; 
        -ms-flex: 1 0 85%; 
            flex: 1 0 85%;
@@ -201,7 +203,8 @@ html {
            transform: translateY(0%);
    overflow-y: scroll;
  }
- 
+}
+
  .panel.open{
     -webkit-box-flex: 3;
         -ms-flex: 3;
